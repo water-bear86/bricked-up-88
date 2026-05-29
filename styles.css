@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "VT323", monospace;
+}
+
+.font-press-start {
+  font-family: "Press Start 2P", monospace;
+}
+
+@keyframes level-up-anim {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotateX(45deg);
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+    transform: scale(1.1) rotateX(45deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.5) rotateX(45deg);
+  }
+}
+
+.level-up-message {
+  animation: level-up-anim 2s ease-in-out forwards;
+  text-shadow: 0 0 15px #facc15, 0 0 25px #facc15;
+}
